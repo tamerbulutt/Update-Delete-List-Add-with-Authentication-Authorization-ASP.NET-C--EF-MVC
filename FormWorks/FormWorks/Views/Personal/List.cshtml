@@ -1,0 +1,50 @@
+﻿@using FormWorks.Models.EntityFramework
+@model List<tblPersonal>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>List</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>City</th>
+            <th>Price</th>
+            </thead>
+            <tbody>
+                @foreach (var personal in Model)
+                {
+                    <tr>
+                        <td>@personal.ID</td>
+                        <td>@personal.Name</td>
+                        <td>@personal.LastName</td>
+                        <td>@personal.City</td>
+                        <td>@personal.Price</td>
+                        <td>
+                            <a class="btn btn-danger" href="/Personal/Delete/@personal.ID">Delete</a>
+                            <a class="btn btn-info" href="/Personal/Update/@personal.ID">Update</a>
+                        </td>
+
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+        <a href="/Personal/AddPersonal">Add</a>
+        <a href="/Security/Logout">Logout</a>
+
+    </div>
+</body>
+</html>

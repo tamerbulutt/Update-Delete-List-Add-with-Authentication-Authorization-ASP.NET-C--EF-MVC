@@ -1,0 +1,30 @@
+﻿@model FormWorks.Models.EntityFramework.tblUsers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+        {
+            <div class="form-group>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-success">GİRİŞ</button>
+        }
+    </div>
+</body>
+</html>

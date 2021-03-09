@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCFormWorksModelStoreContainer" CdmEntityContainer="MVCFormWorksEntities">
+    <EntitySetMapping Name="tblPersonal">
+      <EntityTypeMapping TypeName="MVCFormWorksModel.tblPersonal">
+        <MappingFragment StoreEntitySet="tblPersonal">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="MVCFormWorksModel.tblUsers">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

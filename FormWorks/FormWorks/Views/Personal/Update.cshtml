@@ -1,0 +1,43 @@
+﻿@model FormWorks.Models.EntityFramework.tblPersonal
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Update</title>
+</head>
+<body>
+    <div class="container">
+        @*@Html.ValidationSummary() Gerekli koşulları listeliyor yukarıda.*@
+        @using (@Html.BeginForm("Update", "Personal", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.City)
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.City)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Price)
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Price)
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+        }
+    </div>
+</body>
+</html>
